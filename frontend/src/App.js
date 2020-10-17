@@ -1,16 +1,15 @@
-import React, { useState } from "react";
-import Display from "./Display";
+import React from "react";
+import SearchBox from "./components/SearchBox";
+import Results from "./components/Results";
+import Header from "./components/Header";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <form>
-        <input type="text" onChange={(event) => handleChange(event)} />
-        <button type="submit" onClick={formHandle}>
-          Add
-        </button>
-      </form>
-      <Display nameA={nameA} />
+    <div className="app">
+      <Header />
+      <SearchBox />
+      <Results />
     </div>
   );
 }
